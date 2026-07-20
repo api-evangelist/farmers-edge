@@ -1,0 +1,15 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/farmers-edge-farmcommand-openapi-original.json
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - query
+schemes:
+- name: FarmCommand Token
+  type: apiKey
+  in: query
+  parameter: token
+  sources:
+  - openapi/farmers-edge-farmcommand-openapi-original.json
