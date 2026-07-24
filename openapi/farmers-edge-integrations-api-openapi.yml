@@ -1,0 +1,43 @@
+swagger: '2.0'
+info:
+  title: FarmCommand canplug integrations API
+  termsOfService: https://www.farmcommand.com/terms-of-service
+  contact:
+    name: Product Support
+    email: productsupport@farmersedge.ca
+  version: ''
+host: admin.farmcommand.com
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+security:
+- FarmCommand Token: []
+tags:
+- name: integrations
+paths:
+  /integrations/leaf/alerts/:
+    parameters: []
+    post:
+      operationId: integrations_leaf_alerts_create
+      description: 'Process Leaf Alerts; Used as a hook directly by LEAF.
+
+        It accepts a flexible body that  will be forwarded to PubSub,
+
+        so long as the request is signed properly.'
+      parameters: []
+      responses:
+        '200':
+          description: Leaf alert processed successfully.
+        '400':
+          description: Bad Request
+      tags:
+      - integrations
+securityDefinitions:
+  FarmCommand Token:
+    type: apiKey
+    name: token
+    in: query

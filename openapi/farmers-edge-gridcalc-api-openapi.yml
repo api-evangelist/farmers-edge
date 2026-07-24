@@ -1,0 +1,60 @@
+swagger: '2.0'
+info:
+  title: FarmCommand canplug gridcalc API
+  termsOfService: https://www.farmcommand.com/terms-of-service
+  contact:
+    name: Product Support
+    email: productsupport@farmersedge.ca
+  version: ''
+host: admin.farmcommand.com
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+security:
+- FarmCommand Token: []
+tags:
+- name: gridcalc
+paths:
+  /gridcalc/token-login/:
+    parameters: []
+    post:
+      operationId: gridcalc_token-login_create
+      description: Token login for Grid Calc users, returns token if logged in successfully
+      parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          required:
+          - password
+          - username
+          type: object
+          properties:
+            username:
+              type: string
+            password:
+              type: string
+      responses:
+        '201':
+          description: ''
+          schema:
+            required:
+            - password
+            - username
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+      tags:
+      - gridcalc
+securityDefinitions:
+  FarmCommand Token:
+    type: apiKey
+    name: token
+    in: query

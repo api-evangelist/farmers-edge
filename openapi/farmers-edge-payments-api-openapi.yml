@@ -1,0 +1,68 @@
+swagger: '2.0'
+info:
+  title: FarmCommand canplug payments API
+  termsOfService: https://www.farmcommand.com/terms-of-service
+  contact:
+    name: Product Support
+    email: productsupport@farmersedge.ca
+  version: ''
+host: admin.farmcommand.com
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+security:
+- FarmCommand Token: []
+tags:
+- name: payments
+paths:
+  /payments/stripe-webhook-hefty/:
+    parameters: []
+    post:
+      operationId: payments_stripe-webhook-hefty_create
+      summary: Handle a Stripe webhook event for Hefty account. This endpoint for Stripe usage only and should not be used directly.
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: Stripe webhook event handled
+        '400':
+          description: Bad Request
+      tags:
+      - payments
+  /payments/stripe-webhook-labcommand-canada/:
+    parameters: []
+    post:
+      operationId: payments_stripe-webhook-labcommand-canada_create
+      summary: Handle a Stripe webhook event for LabCommand (Canada) account. This endpoint for Stripe usage only and should not be used directly.
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: Stripe webhook event handled
+        '400':
+          description: Bad Request
+      tags:
+      - payments
+  /payments/stripe-webhook-labcommand-usa/:
+    parameters: []
+    post:
+      operationId: payments_stripe-webhook-labcommand-usa_create
+      summary: Handle a Stripe webhook event for LabCommand (USA) account. This endpoint for Stripe usage only and should not be used directly.
+      description: ''
+      parameters: []
+      responses:
+        '200':
+          description: Stripe webhook event handled
+        '400':
+          description: Bad Request
+      tags:
+      - payments
+securityDefinitions:
+  FarmCommand Token:
+    type: apiKey
+    name: token
+    in: query

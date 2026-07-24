@@ -1,0 +1,101 @@
+swagger: '2.0'
+info:
+  title: FarmCommand canplug API
+  termsOfService: https://www.farmcommand.com/terms-of-service
+  contact:
+    name: Product Support
+    email: productsupport@farmersedge.ca
+  version: ''
+host: admin.farmcommand.com
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+security:
+- FarmCommand Token: []
+tags:
+- name: canplug
+paths:
+  /canplug/imeicanplug/:
+    parameters: []
+    get:
+      operationId: canplug_imeicanplug_list
+      description: 'Get a canplug through IMEI.  This should ONLY be used during the provisioning process.  A
+
+        CanPlug''s IMEI may change after the original manufacturer spreadsheet is loaded in.  In such
+
+        a case, we aren''t searching by the IMEI property, but by the original _imei value.'
+      parameters:
+      - name: imei
+        in: query
+        description: Filter canplug by the imei id.
+        required: true
+        type: string
+      responses:
+        '200':
+          description: CanPlug returned successfully
+          schema:
+            $ref: '#/definitions/CanPlug'
+        '400':
+          description: Bad Request
+        '403':
+          description: Permission Denied
+        '404':
+          description: CanPlug not found
+        '401':
+          description: Invalid Authetnication.
+      tags:
+      - canplug
+definitions:
+  CanPlug:
+    required:
+    - canplugID
+    - implements
+    type: object
+    properties:
+      id:
+        title: ID
+        type: integer
+        readOnly: true
+      canplugID:
+        title: CanplugID
+        type: string
+        minLength: 1
+      grower:
+        title: Grower
+        type: integer
+        x-nullable: true
+      active:
+        title: Active
+        type: boolean
+      implements:
+        type: array
+        items:
+          type: integer
+        uniqueItems: true
+      provisioned:
+        title: Provisioned
+        type: string
+        readOnly: true
+      integrations:
+        type: array
+        items:
+          type: integer
+        readOnly: true
+        uniqueItems: true
+      carrier_name:
+        title: Carrier name
+        type: string
+        readOnly: true
+      is_xbee:
+        title: Is xbee
+        type: string
+        readOnly: true
+securityDefinitions:
+  FarmCommand Token:
+    type: apiKey
+    name: token
+    in: query

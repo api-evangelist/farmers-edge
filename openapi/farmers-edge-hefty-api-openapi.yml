@@ -1,0 +1,203 @@
+swagger: '2.0'
+info:
+  title: FarmCommand canplug hefty API
+  termsOfService: https://www.farmcommand.com/terms-of-service
+  contact:
+    name: Product Support
+    email: productsupport@farmersedge.ca
+  version: ''
+host: admin.farmcommand.com
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+security:
+- FarmCommand Token: []
+tags:
+- name: hefty
+paths:
+  /hefty/createuser/:
+    parameters: []
+    post:
+      operationId: hefty_createuser_create
+      description: 'Add a hefty client to the system. If successful will return the username and token.
+
+        This will create a grower (with username as label), farm (with farm_name as label), Client
+
+        with role ''Hefty'' and permission on the grower created. Also will create a
+
+        ClientBillingAddress, ClientArea, Contact (for phone and email), and a ClientAsset
+
+        (with grower)'
+      parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          required:
+          - address
+          - area
+          - city
+          - country
+          - email
+          - farm_name
+          - fax
+          - first
+          - last
+          - mobile_phone
+          - password
+          - phone
+          - postal_code
+          - province
+          - units
+          - username
+          type: object
+          properties:
+            first:
+              description: Their first name
+              type: string
+            last:
+              description: Their last name
+              type: string
+            farm_name:
+              description: The farm name (company name)
+              type: string
+            email:
+              description: Their email
+              type: string
+            country:
+              description: Billing address county
+              type: string
+            address:
+              description: Billing address
+              type: string
+            postal_code:
+              description: Billing address postal code/zip code
+              type: string
+            city:
+              description: Billing address city
+              type: string
+            province:
+              description: Billing address province or state
+              type: string
+            phone:
+              description: Phone contact
+              type: string
+            mobile_phone:
+              description: Mobile Phone contact (can be blank)
+              type: string
+            fax:
+              description: Fax contact (can be blank)
+              type: string
+            username:
+              description: Their desired username
+              type: string
+            password:
+              description: Their password
+              type: string
+            area:
+              description: The area they think they will use in this program
+              type: string
+            units:
+              description: The default type of units they would like.
+              type: string
+              enum:
+              - US CUSTOMARY
+              - METRIC
+      responses:
+        '201':
+          description: User Created
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              token:
+                type: string
+        '400':
+          description: Bad request
+      tags:
+      - hefty
+  /hefty/password/reset/:
+    parameters: []
+    post:
+      operationId: hefty_password_reset_create
+      description: Sends an email to the user using FESoils branding .
+      parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          required:
+          - identifier
+          - url
+          type: object
+          properties:
+            identifier:
+              description: The username or email of a user
+              type: string
+            url:
+              description: The url you would like used to reset the password with. /password/reset/<token> will be appended to the url passed in. eg. "https://admin.farmcommand.com"
+              type: string
+      responses:
+        '200':
+          description: Success
+        '404':
+          description: Client not found
+        '400':
+          description: Bad request
+      tags:
+      - hefty
+  /hefty/recommendation/completed/:
+    parameters: []
+    post:
+      operationId: hefty_recommendation_completed_create
+      description: This view is for the AgIntegrated call back ( so useful to no one reading these docs)
+      parameters: []
+      responses:
+        '201':
+          description: ''
+      tags:
+      - hefty
+  /hefty/token-login/:
+    parameters: []
+    post:
+      operationId: hefty_token-login_create
+      description: Token login for Hefty users, returns token if logged in successfully
+      parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          required:
+          - password
+          - username
+          type: object
+          properties:
+            username:
+              type: string
+            password:
+              type: string
+      responses:
+        '201':
+          description: ''
+          schema:
+            required:
+            - password
+            - username
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+      tags:
+      - hefty
+securityDefinitions:
+  FarmCommand Token:
+    type: apiKey
+    name: token
+    in: query

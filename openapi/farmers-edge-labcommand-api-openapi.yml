@@ -1,0 +1,248 @@
+swagger: '2.0'
+info:
+  title: FarmCommand canplug labcommand API
+  termsOfService: https://www.farmcommand.com/terms-of-service
+  contact:
+    name: Product Support
+    email: productsupport@farmersedge.ca
+  version: ''
+host: admin.farmcommand.com
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+security:
+- FarmCommand Token: []
+tags:
+- name: labcommand
+paths:
+  /labcommand/create-user:
+    parameters: []
+    post:
+      operationId: labcommand_create-user_create
+      summary: Create a FarmCommand Client with LabCommand User role.
+      description: 'Add a LabCommand User client to the system.
+
+
+        Creates a LabCommand User client in the system and assigns it the role ''LabCommand User''.
+
+        Returns the username and token upon successful creation.
+
+
+        This operation also creates a ClientBillingAddress and Contact (for phone and email)
+
+        for the user.'
+      parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          $ref: '#/definitions/ClientBillingAddressCreate'
+      responses:
+        '201':
+          description: User Created
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              token:
+                type: string
+        '400':
+          description: Bad request
+      tags:
+      - labcommand
+  /labcommand/password/reset:
+    parameters: []
+    post:
+      operationId: labcommand_password_reset_create
+      summary: Processes a password reset request for a client.
+      description: 'This method checks if a client exists for the given identifier (email or username)
+
+        and sends a password reset email if the client is valid.
+
+        If the client is not found or an error occurs in sending the email,
+
+        it returns an appropriate error response.'
+      parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          required:
+          - identifier
+          - url
+          type: object
+          properties:
+            identifier:
+              description: The username or email of a user
+              type: string
+            url:
+              description: The url you would like used to reset the password with. /password/reset/<token> will be appended to the url passed in. eg. "https://admin.farmcommand.com"
+              type: string
+            timezone:
+              description: The user's timezone
+              type: string
+      responses:
+        '200':
+          description: Success
+        '404':
+          description: Client not found
+        '400':
+          description: Bad request
+      tags:
+      - labcommand
+  /labcommand/token-login:
+    parameters: []
+    post:
+      operationId: labcommand_token-login_create
+      description: Token login for LabCommand users, returns token if logged in successfully
+      parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          required:
+          - password
+          - username
+          type: object
+          properties:
+            username:
+              type: string
+            password:
+              type: string
+      responses:
+        '201':
+          description: ''
+          schema:
+            required:
+            - password
+            - username
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+      tags:
+      - labcommand
+definitions:
+  ClientBillingAddressCreate:
+    required:
+    - first_name
+    - last_name
+    - username
+    - farm_name
+    - email
+    - country
+    - address_line1
+    - postal_or_zip_code
+    - city
+    - province_state
+    - phone
+    - password
+    type: object
+    properties:
+      id:
+        title: Id
+        type: integer
+        readOnly: true
+      client_id:
+        title: Client id
+        type: integer
+        readOnly: true
+      first_name:
+        title: First name
+        type: string
+        minLength: 1
+      last_name:
+        title: Last name
+        type: string
+        minLength: 1
+      username:
+        title: Username
+        type: string
+        minLength: 1
+      units:
+        title: Units
+        type: string
+        minLength: 1
+      farm_name:
+        title: Farm name
+        type: string
+        minLength: 1
+      email:
+        title: Email
+        type: string
+        format: email
+        maxLength: 254
+        minLength: 1
+      country:
+        title: Country
+        type: string
+        enum:
+        - Canada
+        - USA
+        - Brazil
+      address_line1:
+        title: Address line1
+        type: string
+        maxLength: 500
+        minLength: 1
+      address_line2:
+        title: Address line2
+        type: string
+        maxLength: 500
+      postal_or_zip_code:
+        title: Postal or zip code
+        type: string
+        maxLength: 25
+        minLength: 1
+      city:
+        title: City
+        type: string
+        maxLength: 100
+        minLength: 1
+      province_state:
+        title: Province state
+        type: string
+        maxLength: 100
+        minLength: 1
+      lat:
+        title: Lat
+        type: number
+        x-nullable: true
+      lon:
+        title: Lon
+        type: number
+        x-nullable: true
+      phone:
+        title: Phone
+        type: string
+        maxLength: 30
+        minLength: 1
+      mobile_phone:
+        title: Mobile phone
+        type: string
+        maxLength: 30
+      is_invoice_enabled:
+        title: Is invoice enabled
+        type: string
+        readOnly: true
+      created_by:
+        title: Created by
+        type: integer
+        readOnly: true
+        x-nullable: true
+      password:
+        title: Password
+        type: string
+        minLength: 1
+securityDefinitions:
+  FarmCommand Token:
+    type: apiKey
+    name: token
+    in: query

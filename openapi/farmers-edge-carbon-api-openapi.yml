@@ -1,0 +1,68 @@
+swagger: '2.0'
+info:
+  title: FarmCommand canplug carbon API
+  termsOfService: https://www.farmcommand.com/terms-of-service
+  contact:
+    name: Product Support
+    email: productsupport@farmersedge.ca
+  version: ''
+host: admin.farmcommand.com
+basePath: /
+schemes:
+- https
+consumes:
+- application/json
+produces:
+- application/json
+security:
+- FarmCommand Token: []
+tags:
+- name: carbon
+paths:
+  /carbon/docusign-envelope-webhook/:
+    parameters: []
+    post:
+      operationId: carbon_docusign-envelope-webhook_create
+      summary: Handle DocuSign webhook for envelope status updates
+      description: ''
+      parameters:
+      - name: data
+        in: body
+        required: true
+        schema:
+          required:
+          - event
+          - data
+          type: object
+          properties:
+            event:
+              description: Webhook event type
+              type: string
+            data:
+              required:
+              - envelopeId
+              type: object
+              properties:
+                envelopeId:
+                  description: DocuSign Envelope ID
+                  type: string
+          example:
+            event: envelope-completed
+            data:
+              envelopeId: <id>
+      responses:
+        '200':
+          description: Document signed successfully.
+        '400':
+          description: Invalid webhook payload.
+        '401':
+          description: Invalid Signature.
+        '404':
+          description: Envelope not found.
+      tags:
+      - carbon
+securityDefinitions:
+  FarmCommand Token:
+    type: apiKey
+    name: token
+    in: query
