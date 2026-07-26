@@ -1,0 +1,19 @@
+overlay: 1.0.0
+info:
+  title: API Evangelist enhancements for FarmCommand API
+  version: 1.0.0
+extends: openapi/farmers-edge-farmcommand-openapi-original.json
+actions:
+- target: $.info
+  update:
+    x-apievangelist-enriched: '2026-07-19'
+    x-api-provider: Farmers Edge
+    x-product: FarmCommand
+    description: 'Public FarmCommand API: self-serve client onboarding/verification, token login across
+      FarmCommand/LabCommand/GridCalc/RecEngine/Hefty, password resets, CanPlug IoT device lookup, and
+      inbound Stripe/DocuSign/LEAF webhook receivers. Auth: FarmCommand API token as the `token` query
+      parameter.'
+- target: $.info
+  update:
+    x-agent-notes: Webhook receiver operations (stripe-webhook-*, docusign-envelope-webhook, leaf/alerts)
+      are provider-to-provider inbound callbacks and are not suitable agent tools.

@@ -1,0 +1,159 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/farmers-edge-farmcommand-openapi-original.json
+entities:
+- name: CanPlug
+  fields:
+  - id
+  - canplugID
+  - grower
+  - active
+  - implements
+  - provisioned
+  - integrations
+  - carrier_name
+  - is_xbee
+  relationships:
+  - field: grower
+    kind: belongs_to
+    target: Grower
+  - field: implements
+    kind: has_many
+    target: Implement
+  - field: integrations
+    kind: has_many
+    target: Integration
+- name: SelfServeClient
+  fields:
+  - id
+  - user
+  - username
+  - password
+  - first_name
+  - last_name
+  - email
+  - product_name
+  - company_name
+  - partner
+  - phone
+  - address_line1
+  - address_line2
+  - city
+  - province_state
+  - postal_or_zip_code
+  - country
+  - verified
+  - last_verification_email_sent
+  - client_type
+  - payment_session_id
+  - client_secret
+  - payment_session_status
+  - eula_version
+  - eula_date_signed
+  - crm_id
+  - created_datetime
+  - updated_datetime
+  - client
+  - service_offering
+  - created_by
+  - last_updated_by
+  relationships:
+  - field: user
+    kind: belongs_to
+    target: User
+  - field: partner
+    kind: belongs_to
+    target: Partner
+  - field: client
+    kind: belongs_to
+    target: Client
+  - field: service_offering
+    kind: belongs_to
+    target: ServiceOffering
+  - field: created_by
+    kind: belongs_to
+    target: User
+  - field: last_updated_by
+    kind: belongs_to
+    target: User
+- name: SelfServeClientResponse
+  fields:
+  - id
+  - username
+  - email
+  - first_name
+  - last_name
+  - company_name
+  - partner
+  - phone
+  - address_line1
+  - address_line2
+  - city
+  - province_state
+  - postal_or_zip_code
+  - country
+  - verified
+  - last_verification_email_sent
+  - client_type
+  - payment_session_id
+  - client_secret
+  - payment_session_status
+  - eula_version
+  - eula_date_signed
+  - crm_id
+  - created_datetime
+  - updated_datetime
+  - client
+  - user
+  - service_offering
+  - created_by
+  - last_updated_by
+  relationships:
+  - field: partner
+    kind: belongs_to
+    target: Partner
+  - field: client
+    kind: belongs_to
+    target: Client
+  - field: user
+    kind: belongs_to
+    target: User
+  - field: service_offering
+    kind: belongs_to
+    target: ServiceOffering
+  - field: created_by
+    kind: belongs_to
+    target: User
+  - field: last_updated_by
+    kind: belongs_to
+    target: User
+- name: ClientBillingAddressCreate
+  fields:
+  - id
+  - client_id
+  - first_name
+  - last_name
+  - username
+  - units
+  - farm_name
+  - email
+  - country
+  - address_line1
+  - address_line2
+  - postal_or_zip_code
+  - city
+  - province_state
+  - lat
+  - lon
+  - phone
+  - mobile_phone
+  - is_invoice_enabled
+  - created_by
+  - password
+  relationships:
+  - field: client_id
+    kind: belongs_to
+    target: Client
+  - field: created_by
+    kind: belongs_to
+    target: User

@@ -1,0 +1,11 @@
+generated: '2026-07-19'
+method: generated
+skills:
+  - file: farmers-edge-self-serve-onboarding.md
+    name: Onboard a FarmCommand self-serve client
+    api: openapi/farmers-edge-farmcommand-openapi-original.json
+    operations: [client_validate-username_list, client_selfserveclient_create, client_selfserveclient_verify_create, client_selfserveclient_resend-verification-email_create]
+  - file: farmers-edge-token-login.md
+    name: Authenticate a FarmCommand product user (token login)
+    api: openapi/farmers-edge-farmcommand-openapi-original.json
+    operations: [token-login_create, labcommand_token-login_create, gridcalc_token-login_create, recengine_token-login_create, hefty_token-login_create, client_password_reset_create, client_password_reset_change_create]

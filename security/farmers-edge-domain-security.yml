@@ -1,0 +1,27 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: www.farmcommand.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 12 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: developer.farmcommand.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 12 23:59:59 2026 GMT
+  hsts: null
+- host: admin.farmcommand.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Dec 12 23:59:59 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+domains:
+- domain: farmcommand.com
+  dnssec: false
+  caa: []
+  spf: false
+  dmarc: false

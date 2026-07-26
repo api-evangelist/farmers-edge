@@ -1,0 +1,19 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/farmers-edge-farmcommand-openapi-original.json
+versioning:
+  scheme: none-in-path
+  current: null
+  docs: https://api.farmcommand.com/docs/
+  note: info.version is empty in the published Swagger doc; basePath `/` carries no version segment.
+deprecation:
+  policy_url: null
+  sunset_header: null
+  note: No deprecation policy or RFC 8594 Sunset/Deprecation header support found.
+sla:
+  url: null
+status_page: null
+deprecated_operations: []
+note: No public status page, deprecation policy, or SLA page was located for FarmCommand. farmersedge.com
+  resolves to a default IIS placeholder and farmersedge.ca has a broken TLS endpoint; the live surface
+  is the FarmCommand platform (www./developer./api.farmcommand.com).

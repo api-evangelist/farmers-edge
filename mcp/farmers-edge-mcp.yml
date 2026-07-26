@@ -1,0 +1,88 @@
+generated: '2026-07-19'
+method: derived
+status: candidate
+note: Candidate tool list derived from FarmCommand OpenAPI operations. No official hosted MCP server was
+  found. Many operations are inbound provider webhooks (Stripe/DocuSign/LEAF) and are not meaningful agent
+  tools.
+server:
+  name: farmcommand
+  transport: http
+tools:
+- name: canplug_imeicanplug_list
+  description: Get a canplug through IMEI.  This should ONLY be used during the provisioning process.  A
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#canplug_imeicanplug_list
+- name: carbon_docusign-envelope-webhook_create
+  description: Handle DocuSign webhook for envelope status updates
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#carbon_docusign-envelope-webhook_create
+- name: client_forgotpassword_create
+  description: client_forgotpassword_create
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#client_forgotpassword_create
+- name: client_password_reset_create
+  description: Send an email to change a password with a token.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#client_password_reset_create
+- name: client_password_reset_change_create
+  description: Change a password with a token.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#client_password_reset_change_create
+- name: client_selfserveclient_create
+  description: Create a new Self Serve Client
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#client_selfserveclient_create
+- name: client_selfserveclient_resend-verification-email_create
+  description: Resend a verification email to a self-serve client.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#client_selfserveclient_resend-verification-email_create
+- name: client_selfserveclient_verify_create
+  description: Verify a self-serve client with a valid token.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#client_selfserveclient_verify_create
+- name: client_validate-username_list
+  description: Validate the availability of a username.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#client_validate-username_list
+- name: contact_unsubscribe_list
+  description: This view should be triggered by clicking the unsubscribe link in an email
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#contact_unsubscribe_list
+- name: contact_verify_list
+  description: This view should be triggered by an email about verifying your email
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#contact_verify_list
+- name: gridcalc_token-login_create
+  description: Token login for Grid Calc users, returns token if logged in successfully
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#gridcalc_token-login_create
+- name: hefty_createuser_create
+  description: Add a hefty client to the system. If successful will return the username and token.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#hefty_createuser_create
+- name: hefty_password_reset_create
+  description: Sends an email to the user using FESoils branding .
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#hefty_password_reset_create
+- name: hefty_recommendation_completed_create
+  description: This view is for the AgIntegrated call back ( so useful to no one reading these docs)
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#hefty_recommendation_completed_create
+- name: hefty_token-login_create
+  description: Token login for Hefty users, returns token if logged in successfully
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#hefty_token-login_create
+- name: integrations_leaf_alerts_create
+  description: Process Leaf Alerts; Used as a hook directly by LEAF.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#integrations_leaf_alerts_create
+- name: labcommand_create-user_create
+  description: Create a FarmCommand Client with LabCommand User role.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#labcommand_create-user_create
+- name: labcommand_password_reset_create
+  description: Processes a password reset request for a client.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#labcommand_password_reset_create
+- name: labcommand_token-login_create
+  description: Token login for LabCommand users, returns token if logged in successfully
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#labcommand_token-login_create
+- name: payments_stripe-webhook-hefty_create
+  description: Handle a Stripe webhook event for Hefty account. This endpoint for Stripe usage only and
+    should not be used directly.
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#payments_stripe-webhook-hefty_create
+- name: payments_stripe-webhook-labcommand-canada_create
+  description: Handle a Stripe webhook event for LabCommand (Canada) account. This endpoint for Stripe
+    usage only and should not be use
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#payments_stripe-webhook-labcommand-canada_create
+- name: payments_stripe-webhook-labcommand-usa_create
+  description: Handle a Stripe webhook event for LabCommand (USA) account. This endpoint for Stripe usage
+    only and should not be used d
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#payments_stripe-webhook-labcommand-usa_create
+- name: recengine_token-login_create
+  description: Token login for RecEngine users, returns token if logged in successfully
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#recengine_token-login_create
+- name: token-login_create
+  description: Token login for FarmCommand users, returns token if logged in successfully
+  source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#token-login_create

@@ -1,0 +1,72 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/farmers-edge-farmcommand-openapi-original.json
+format: non-standard
+envelope: DRF error object (application/json); typically a `detail` string or field-keyed validation errors.
+  No RFC 9457 problem+json.
+problems:
+- status: 400
+  title: Bad Request
+  descriptions:
+  - Bad Request
+  - Bad Request.
+  - Bad request
+  - Invalid webhook payload.
+  remediation: Validate the request body/parameters against the operation schema before retrying.
+  source_operations:
+  - canplug_imeicanplug_list
+  - carbon_docusign-envelope-webhook_create
+  - client_password_reset_change_create
+  - client_password_reset_create
+  - client_selfserveclient_create
+  - client_selfserveclient_resend-verification-email_create
+  - client_selfserveclient_verify_create
+  - client_validate-username_list
+  - hefty_createuser_create
+  - hefty_password_reset_create
+  - integrations_leaf_alerts_create
+  - labcommand_create-user_create
+- status: 401
+  title: Unauthorized
+  descriptions:
+  - Invalid Authetnication.
+  - Invalid Signature.
+  remediation: Provide a valid FarmCommand API token (query parameter `token`); webhook endpoints require
+    a valid provider signature.
+  source_operations:
+  - canplug_imeicanplug_list
+  - carbon_docusign-envelope-webhook_create
+- status: 403
+  title: Permission Denied
+  descriptions:
+  - Permission Denied
+  remediation: The authenticated principal lacks permission for this resource.
+  source_operations:
+  - canplug_imeicanplug_list
+- status: 404
+  title: Not Found
+  descriptions:
+  - CanPlug not found
+  - Client not found
+  - Contact Not Found
+  - Envelope not found.
+  - Self Serve Client not found
+  remediation: The referenced resource (client, contact, CanPlug, or DocuSign envelope) does not exist.
+  source_operations:
+  - canplug_imeicanplug_list
+  - carbon_docusign-envelope-webhook_create
+  - client_password_reset_change_create
+  - client_password_reset_create
+  - client_selfserveclient_resend-verification-email_create
+  - client_selfserveclient_verify_create
+  - contact_unsubscribe_list
+  - contact_verify_list
+  - hefty_password_reset_create
+  - labcommand_password_reset_create
+- status: 429
+  title: Too Many Requests
+  descriptions:
+  - Too Many Requests
+  remediation: Rate limit exceeded; back off and retry after a delay.
+  source_operations:
+  - client_selfserveclient_create

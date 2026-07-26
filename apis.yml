@@ -1,8 +1,26 @@
 aid: farmers-edge
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/farmers-edge.png
 name: Farmers Edge
-description: 'Farmers Edge is a company surfaced as a portfolio company of kleiner-perkins and added to
-  the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: 'Farmers Edge is a precision-agriculture and digital-farming company whose FarmCommand
+  platform combines satellite imagery, connected weather stations, in-field telematics (the CanPlug
+  IoT device), agronomic modeling, carbon-program tooling, and soil/lab products such as LabCommand
+  and Hefty/FESoils. The public FarmCommand API is a Django REST (drf-yasg) service on
+  admin.farmcommand.com that handles self-serve client onboarding and verification, token-based login
+  for FarmCommand, LabCommand, GridCalc, RecEngine and Hefty users, password resets, CanPlug device
+  lookup, and inbound integration webhooks (Stripe billing, DocuSign envelopes, LEAF field alerts).
+  Authentication is a FarmCommand API token passed as a query parameter.'
 url: https://raw.githubusercontent.com/api-evangelist/farmers-edge/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,13 +30,168 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Enterprise
-apis: []
+- Agriculture
+- Precision Agriculture
+- AgTech
+- Farm Management
+- Digital Agriculture
+- IoT
+- Weather
+- Carbon
+- API
+apis:
+- aid: farmers-edge:farmers-edge-canplug-api
+  name: Farmers Edge canplug API
+  description: The canplug API from Farmers Edge — 1 operation(s) for canplug.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - canplug
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-canplug-api-openapi.yml
+- aid: farmers-edge:farmers-edge-carbon-api
+  name: Farmers Edge carbon API
+  description: The carbon API from Farmers Edge — 1 operation(s) for carbon.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - carbon
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-carbon-api-openapi.yml
+- aid: farmers-edge:farmers-edge-client-api
+  name: Farmers Edge client API
+  description: The client API from Farmers Edge — 7 operation(s) for client.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - client
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-client-api-openapi.yml
+- aid: farmers-edge:farmers-edge-contact-api
+  name: Farmers Edge contact API
+  description: The contact API from Farmers Edge — 2 operation(s) for contact.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - contact
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-contact-api-openapi.yml
+- aid: farmers-edge:farmers-edge-gridcalc-api
+  name: Farmers Edge gridcalc API
+  description: The gridcalc API from Farmers Edge — 1 operation(s) for gridcalc.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - gridcalc
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-gridcalc-api-openapi.yml
+- aid: farmers-edge:farmers-edge-hefty-api
+  name: Farmers Edge hefty API
+  description: The hefty API from Farmers Edge — 4 operation(s) for hefty.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - hefty
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-hefty-api-openapi.yml
+- aid: farmers-edge:farmers-edge-integrations-api
+  name: Farmers Edge integrations API
+  description: The integrations API from Farmers Edge — 1 operation(s) for integrations.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - integrations
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-integrations-api-openapi.yml
+- aid: farmers-edge:farmers-edge-labcommand-api
+  name: Farmers Edge labcommand API
+  description: The labcommand API from Farmers Edge — 3 operation(s) for labcommand.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - labcommand
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-labcommand-api-openapi.yml
+- aid: farmers-edge:farmers-edge-payments-api
+  name: Farmers Edge payments API
+  description: The payments API from Farmers Edge — 3 operation(s) for payments.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - payments
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-payments-api-openapi.yml
+- aid: farmers-edge:farmers-edge-recengine-api
+  name: Farmers Edge recengine API
+  description: The recengine API from Farmers Edge — 1 operation(s) for recengine.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - recengine
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-recengine-api-openapi.yml
+- aid: farmers-edge:farmers-edge-token-login-api
+  name: Farmers Edge token-login API
+  description: The token-login API from Farmers Edge — 1 operation(s) for token-login.
+  humanURL: https://developer.farmcommand.com/
+  baseURL: https://admin.farmcommand.com/
+  tags:
+  - token-login
+  properties:
+  - type: OpenAPI
+    url: openapi/farmers-edge-token-login-api-openapi.yml
+common:
+- type: DomainSecurity
+  url: security/farmers-edge-domain-security.yml
+- type: Authentication
+  url: authentication/farmers-edge-authentication.yml
+- type: Website
+  url: https://www.farmcommand.com/
+- type: DeveloperPortal
+  url: https://developer.farmcommand.com/
+- type: Documentation
+  url: https://api.farmcommand.com/docs/
+- type: APIReference
+  url: https://api.farmcommand.com/docs/
+- type: Conventions
+  url: conventions/farmers-edge-conventions.yml
+- type: ErrorCatalog
+  url: errors/farmers-edge-problem-types.yml
+- type: DataModel
+  url: data-model/farmers-edge-data-model.yml
+- type: Conformance
+  url: conformance/farmers-edge-conformance.yml
+- type: Lifecycle
+  url: lifecycle/farmers-edge-lifecycle.yml
+- type: Overlay
+  url: overlays/farmers-edge-farmcommand-overlay.yaml
+- type: MCPServer
+  url: mcp/farmers-edge-mcp.yml
+- type: LLMsTxt
+  url: llms/farmers-edge-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

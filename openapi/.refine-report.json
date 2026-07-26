@@ -1,0 +1,46 @@
+{
+  "provider": "farmers-edge",
+  "sources": [
+    "farmers-edge-canplug-api-openapi.yml",
+    "farmers-edge-carbon-api-openapi.yml",
+    "farmers-edge-client-api-openapi.yml",
+    "farmers-edge-contact-api-openapi.yml",
+    "farmers-edge-gridcalc-api-openapi.yml",
+    "farmers-edge-hefty-api-openapi.yml",
+    "farmers-edge-integrations-api-openapi.yml",
+    "farmers-edge-labcommand-api-openapi.yml",
+    "farmers-edge-payments-api-openapi.yml",
+    "farmers-edge-recengine-api-openapi.yml",
+    "farmers-edge-token-login-api-openapi.yml"
+  ],
+  "outputs": [
+    "farmers-edge-canplug-api-openapi.yml",
+    "farmers-edge-carbon-api-openapi.yml",
+    "farmers-edge-client-api-openapi.yml",
+    "farmers-edge-contact-api-openapi.yml",
+    "farmers-edge-gridcalc-api-openapi.yml",
+    "farmers-edge-hefty-api-openapi.yml",
+    "farmers-edge-integrations-api-openapi.yml",
+    "farmers-edge-labcommand-api-openapi.yml",
+    "farmers-edge-payments-api-openapi.yml",
+    "farmers-edge-recengine-api-openapi.yml",
+    "farmers-edge-token-login-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [
+    "farmers-edge-canplug-api-openapi.yml: info.version missing",
+    "farmers-edge-carbon-api-openapi.yml: info.version missing",
+    "farmers-edge-client-api-openapi.yml: info.version missing",
+    "farmers-edge-contact-api-openapi.yml: info.version missing",
+    "farmers-edge-gridcalc-api-openapi.yml: info.version missing",
+    "farmers-edge-hefty-api-openapi.yml: info.version missing",
+    "farmers-edge-integrations-api-openapi.yml: info.version missing",
+    "farmers-edge-labcommand-api-openapi.yml: info.version missing",
+    "farmers-edge-payments-api-openapi.yml: info.version missing",
+    "farmers-edge-recengine-api-openapi.yml: info.version missing",
+    "farmers-edge-token-login-api-openapi.yml: info.version missing"
+  ],
+  "notes": [],
+  "skipped": []
+}

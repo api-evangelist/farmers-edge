@@ -1,0 +1,39 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/farmers-edge-farmcommand-openapi-original.json
+authentication:
+  style: apiKey
+  location: query
+  parameter: token
+  scheme_name: FarmCommand Token
+  note: Single API-key token passed as the `token` query parameter. Webhook receiver endpoints (Stripe/DocuSign)
+    instead validate a provider signature.
+  ref: authentication/farmers-edge-authentication.yml
+media_type:
+  request: application/json
+  response: application/json
+idempotency:
+  supported: false
+  note: No idempotency-key header or parameter is documented in the OpenAPI.
+pagination:
+  supported: false
+  note: No list-collection pagination parameters are present in the published spec (endpoints are single-resource
+    create/login/verify operations).
+rate_limiting:
+  signaled: true
+  evidence: HTTP 429 Too Many Requests is a documented response
+  headers: not documented in spec
+versioning:
+  scheme: none-in-path
+  note: basePath is `/`; no version segment or version string in info.version.
+  ref: lifecycle/farmers-edge-lifecycle.yml
+error_envelope:
+  format: DRF error object
+  note: Django REST Framework style JSON errors (detail string or field-keyed validation map); not RFC
+    9457.
+  ref: errors/farmers-edge-problem-types.yml
+webhooks:
+  direction: inbound
+  note: Endpoints under /payments/stripe-webhook-*, /carbon/docusign-envelope-webhook/, and /integrations/leaf/alerts/
+    are inbound receivers FarmCommand exposes for third parties, not an outbound consumer event/subscription
+    surface.

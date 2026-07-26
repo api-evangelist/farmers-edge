@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: derived
+source: openapi/farmers-edge-farmcommand-openapi-original.json
+standards:
+- id: openapi-swagger2
+  conforms: true
+  evidence: Published Swagger 2.0 document at admin.farmcommand.com/docs/?format=openapi
+- id: apikey-auth
+  conforms: true
+  evidence: securityDefinitions declares an apiKey scheme (token in query)
+- id: oauth2
+  conforms: false
+- id: oidc
+  conforms: false
+  evidence: no /.well-known/openid-configuration (404 on admin/api hosts)
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: errors are DRF JSON, not application/problem+json
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404
+- id: json-api
+  conforms: false
+- id: webhooks-inbound-signed
+  conforms: true
+  evidence: Stripe/DocuSign webhook receivers validate provider signatures (401 Invalid Signature)
