@@ -5,7 +5,7 @@ info:
   contact:
     name: Product Support
     email: productsupport@farmersedge.ca
-  version: ''
+  version: "1.0"
 host: admin.farmcommand.com
 basePath: /
 schemes:
