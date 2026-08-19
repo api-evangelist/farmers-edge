@@ -1,0 +1,62 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug hefty API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "hefty",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "hefty_createuser_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/hefty/createuser/"
+          },
+          "docs": "Add a hefty client to the system. If successful will return the username and token.\nThis will create a grower (with username as label), farm (with farm_name as label), Client\nwith role 'Hefty' and permission on the grower created. Also will create a\nClientBillingAddress, ClientArea, Contact (for phone and email), and a ClientAsset\n(with grower)"
+        },
+        {
+          "info": {
+            "name": "hefty_password_reset_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/hefty/password/reset/"
+          },
+          "docs": "Sends an email to the user using FESoils branding ."
+        },
+        {
+          "info": {
+            "name": "hefty_recommendation_completed_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/hefty/recommendation/completed/"
+          },
+          "docs": "This view is for the AgIntegrated call back ( so useful to no one reading these docs)"
+        },
+        {
+          "info": {
+            "name": "hefty_token-login_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/hefty/token-login/"
+          },
+          "docs": "Token login for Hefty users, returns token if logged in successfully"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

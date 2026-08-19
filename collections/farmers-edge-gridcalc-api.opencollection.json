@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug gridcalc API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "gridcalc",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "gridcalc_token-login_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/gridcalc/token-login/"
+          },
+          "docs": "Token login for Grid Calc users, returns token if logged in successfully"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

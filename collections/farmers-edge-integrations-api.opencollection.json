@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug integrations API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "integrations",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "integrations_leaf_alerts_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/integrations/leaf/alerts/"
+          },
+          "docs": "Process Leaf Alerts; Used as a hook directly by LEAF.\nIt accepts a flexible body that  will be forwarded to PubSub,\nso long as the request is signed properly."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

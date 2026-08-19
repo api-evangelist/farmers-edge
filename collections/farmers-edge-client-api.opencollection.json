@@ -1,0 +1,110 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug client API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "client",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "client_forgotpassword_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/client/forgotpassword/"
+          }
+        },
+        {
+          "info": {
+            "name": "client_password_reset_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/client/password/reset/"
+          },
+          "docs": "Send an email to change a password with a token."
+        },
+        {
+          "info": {
+            "name": "client_password_reset_change_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/client/password/reset/change/"
+          },
+          "docs": "Change a password with a token."
+        },
+        {
+          "info": {
+            "name": "Create a new Self Serve Client",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/client/selfserveclient/",
+            "params": [
+              {
+                "name": "token-login",
+                "value": "",
+                "type": "query",
+                "description": "Logs the user in and returns a token if set to true"
+              }
+            ]
+          },
+          "docs": "Create a new self-serve client."
+        },
+        {
+          "info": {
+            "name": "client_selfserveclient_resend-verification-email_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/client/selfserveclient/resend-verification-email"
+          },
+          "docs": "Resend a verification email to a self-serve client."
+        },
+        {
+          "info": {
+            "name": "client_selfserveclient_verify_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/client/selfserveclient/verify"
+          },
+          "docs": "Verify a self-serve client with a valid token."
+        },
+        {
+          "info": {
+            "name": "client_validate-username_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/client/validate-username",
+            "params": [
+              {
+                "name": "username",
+                "value": "",
+                "type": "query",
+                "description": "The username to check for availability."
+              }
+            ]
+          },
+          "docs": "Validate the availability of a username."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

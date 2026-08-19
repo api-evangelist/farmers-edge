@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug payments API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "payments",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Handle a Stripe webhook event for Hefty account. This endpoint for Stripe usage only and should not be used directly.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/payments/stripe-webhook-hefty/"
+          },
+          "docs": "Handle a Stripe webhook event for Hefty account. This endpoint for Stripe usage only and should not be used directly."
+        },
+        {
+          "info": {
+            "name": "Handle a Stripe webhook event for LabCommand (Canada) account. This endpoint for Stripe usage only and should not be used directly.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/payments/stripe-webhook-labcommand-canada/"
+          },
+          "docs": "Handle a Stripe webhook event for LabCommand (Canada) account. This endpoint for Stripe usage only and should not be used directly."
+        },
+        {
+          "info": {
+            "name": "Handle a Stripe webhook event for LabCommand (USA) account. This endpoint for Stripe usage only and should not be used directly.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/payments/stripe-webhook-labcommand-usa/"
+          },
+          "docs": "Handle a Stripe webhook event for LabCommand (USA) account. This endpoint for Stripe usage only and should not be used directly."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

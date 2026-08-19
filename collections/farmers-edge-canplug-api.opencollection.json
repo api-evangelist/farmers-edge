@@ -1,0 +1,37 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "canplug",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "canplug_imeicanplug_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/canplug/imeicanplug/",
+            "params": [
+              {
+                "name": "imei",
+                "value": "",
+                "type": "query",
+                "description": "Filter canplug by the imei id."
+              }
+            ]
+          },
+          "docs": "Get a canplug through IMEI.  This should ONLY be used during the provisioning process.  A\nCanPlug's IMEI may change after the original manufacturer spreadsheet is loaded in.  In such\na case, we aren't searching by the IMEI property, but by the original _imei value."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

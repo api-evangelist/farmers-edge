@@ -1,0 +1,54 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug contact API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "contact",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "contact_unsubscribe_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/contact/:token/unsubscribe",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "This view should be triggered by clicking the unsubscribe link in an email"
+        },
+        {
+          "info": {
+            "name": "contact_verify_list",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "{{baseUrl}}/contact/:token/verify",
+            "params": [
+              {
+                "name": "token",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "This view should be triggered by an email about verifying your email"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

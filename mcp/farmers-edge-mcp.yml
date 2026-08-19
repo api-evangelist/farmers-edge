@@ -86,3 +86,9 @@ tools:
 - name: token-login_create
   description: Token login for FarmCommand users, returns token if logged in successfully
   source_operation: openapi/farmers-edge-farmcommand-openapi-original.json#token-login_create
+deployment:
+  mode: none
+  verified: derived
+  tools: 25
+  checked: '2026-08-12'
+  source: catalog MCP census

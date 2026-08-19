@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug recengine API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "recengine",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "recengine_token-login_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/recengine/token-login/"
+          },
+          "docs": "Token login for RecEngine users, returns token if logged in successfully"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

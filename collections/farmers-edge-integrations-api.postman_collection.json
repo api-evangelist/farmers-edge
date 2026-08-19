@@ -1,0 +1,155 @@
+{
+  "item": [
+    {
+      "id": "efc24c7f-03ac-4c61-aa94-bfc481938a7a",
+      "name": "integrations",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "0f2409db-a936-48da-b2ee-1a380a0159d8",
+          "name": "integrations leaf alerts create",
+          "request": {
+            "name": "integrations leaf alerts create",
+            "description": {
+              "content": "Process Leaf Alerts; Used as a hook directly by LEAF.\nIt accepts a flexible body that  will be forwarded to PubSub,\nso long as the request is signed properly.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "integrations",
+                "leaf",
+                "alerts",
+                ""
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "method": "POST",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "3fc7c6c7-5dc9-4eb7-89e0-e20e3ae304a3",
+              "name": "Leaf alert processed successfully.",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "integrations",
+                    "leaf",
+                    "alerts",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "698a4233-9b73-49b7-ab1f-9f49010259c2",
+              "name": "Bad Request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "integrations",
+                    "leaf",
+                    "alerts",
+                    ""
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {}
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://admin.farmcommand.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "token"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "0b327591-b7e2-4804-bca6-6d7f8cc0aab8",
+    "name": "FarmCommand canplug integrations API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Contact Support:\n Name: Product Support\n Email: productsupport@farmersedge.ca",
+      "type": "text/plain"
+    }
+  }
+}

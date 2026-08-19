@@ -1,0 +1,465 @@
+{
+  "item": [
+    {
+      "id": "d788658f-a054-4078-8b21-5707c634af9d",
+      "name": "labcommand",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "f439b719-756b-4141-9c04-8c9abbf1f513",
+          "name": "Create a FarmCommand Client with LabCommand User role.",
+          "request": {
+            "name": "Create a FarmCommand Client with LabCommand User role.",
+            "description": {
+              "content": "Add a LabCommand User client to the system.\n\nCreates a LabCommand User client in the system and assigns it the role 'LabCommand User'.\nReturns the username and token upon successful creation.\n\nThis operation also creates a ClientBillingAddress and Contact (for phone and email)\nfor the user.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "labcommand",
+                "create-user"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"username\": \"<string>\",\n  \"farm_name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"country\": \"<string>\",\n  \"address_line1\": \"<string>\",\n  \"postal_or_zip_code\": \"<string>\",\n  \"city\": \"<string>\",\n  \"province_state\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"password\": \"<string>\",\n  \"units\": \"<string>\",\n  \"address_line2\": \"<string>\",\n  \"lat\": \"<number>\",\n  \"lon\": \"<number>\",\n  \"mobile_phone\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5e8148f1-5bc2-4835-aacc-ba53264a415b",
+              "name": "User Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "labcommand",
+                    "create-user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"username\": \"<string>\",\n  \"farm_name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"country\": \"<string>\",\n  \"address_line1\": \"<string>\",\n  \"postal_or_zip_code\": \"<string>\",\n  \"city\": \"<string>\",\n  \"province_state\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"password\": \"<string>\",\n  \"units\": \"<string>\",\n  \"address_line2\": \"<string>\",\n  \"lat\": \"<number>\",\n  \"lon\": \"<number>\",\n  \"mobile_phone\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"username\": \"string\",\n  \"token\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "e3b398f0-4f9e-4a58-8ec9-e60f84937dd1",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "labcommand",
+                    "create-user"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"first_name\": \"<string>\",\n  \"last_name\": \"<string>\",\n  \"username\": \"<string>\",\n  \"farm_name\": \"<string>\",\n  \"email\": \"<email>\",\n  \"country\": \"<string>\",\n  \"address_line1\": \"<string>\",\n  \"postal_or_zip_code\": \"<string>\",\n  \"city\": \"<string>\",\n  \"province_state\": \"<string>\",\n  \"phone\": \"<string>\",\n  \"password\": \"<string>\",\n  \"units\": \"<string>\",\n  \"address_line2\": \"<string>\",\n  \"lat\": \"<number>\",\n  \"lon\": \"<number>\",\n  \"mobile_phone\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "c78c91e9-089f-41fd-b834-a4d06275944e",
+          "name": "Processes a password reset request for a client.",
+          "request": {
+            "name": "Processes a password reset request for a client.",
+            "description": {
+              "content": "This method checks if a client exists for the given identifier (email or username)\nand sends a password reset email if the client is valid.\nIf the client is not found or an error occurs in sending the email,\nit returns an appropriate error response.",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "labcommand",
+                "password",
+                "reset"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"identifier\": \"<string>\",\n  \"url\": \"<string>\",\n  \"timezone\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "6de81b19-7e87-4f54-9d13-38455f113418",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "labcommand",
+                    "password",
+                    "reset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identifier\": \"<string>\",\n  \"url\": \"<string>\",\n  \"timezone\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "230aae35-9ce5-44e6-9c56-bd80eef99c6b",
+              "name": "Bad request",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "labcommand",
+                    "password",
+                    "reset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identifier\": \"<string>\",\n  \"url\": \"<string>\",\n  \"timezone\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            },
+            {
+              "id": "0c2a0003-506f-4741-b04a-5a251926baad",
+              "name": "Client not found",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "labcommand",
+                    "password",
+                    "reset"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"identifier\": \"<string>\",\n  \"url\": \"<string>\",\n  \"timezone\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Not Found",
+              "code": 404,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "3b61d484-9c58-4871-a6fa-2de0031c74b6",
+          "name": "labcommand token-login create",
+          "request": {
+            "name": "labcommand token-login create",
+            "description": {
+              "content": "Token login for LabCommand users, returns token if logged in successfully",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "labcommand",
+                "token-login"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": []
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "89b97344-9543-4af1-87e7-5ae85a684619",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "labcommand",
+                    "token-login"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "token",
+                      "value": "<API Key>"
+                    }
+                  ],
+                  "variable": []
+                },
+                "header": [
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"password\": \"<string>\",\n  \"username\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "Created",
+              "code": 201,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"password\": \"string\",\n  \"username\": \"string\"\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "type": "string",
+      "value": "https://admin.farmcommand.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "token"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "query"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "539a698b-aaf4-4ae3-86f5-500562f64c16",
+    "name": "FarmCommand canplug labcommand API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "Contact Support:\n Name: Product Support\n Email: productsupport@farmersedge.ca",
+      "type": "text/plain"
+    }
+  }
+}

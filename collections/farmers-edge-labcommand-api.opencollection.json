@@ -1,0 +1,51 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "FarmCommand canplug labcommand API",
+    "version": "1.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "labcommand",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Create a FarmCommand Client with LabCommand User role.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/labcommand/create-user"
+          },
+          "docs": "Add a LabCommand User client to the system.\n\nCreates a LabCommand User client in the system and assigns it the role 'LabCommand User'.\nReturns the username and token upon successful creation.\n\nThis operation also creates a ClientBillingAddress and Contact (for phone and email)\nfor the user."
+        },
+        {
+          "info": {
+            "name": "Processes a password reset request for a client.",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/labcommand/password/reset"
+          },
+          "docs": "This method checks if a client exists for the given identifier (email or username)\nand sends a password reset email if the client is valid.\nIf the client is not found or an error occurs in sending the email,\nit returns an appropriate error response."
+        },
+        {
+          "info": {
+            "name": "labcommand_token-login_create",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "{{baseUrl}}/labcommand/token-login"
+          },
+          "docs": "Token login for LabCommand users, returns token if logged in successfully"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
