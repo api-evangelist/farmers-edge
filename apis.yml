@@ -42,6 +42,17 @@ tags:
 - IoT
 - Weather
 - Carbon
+tags_raw:
+- Company
+- Enterprise
+- Agriculture
+- Precision Agriculture
+- AgTech
+- Farm Management
+- Digital Agriculture
+- IoT
+- Weather
+- Carbon
 - API
 apis:
 - aid: farmers-edge:farmers-edge-canplug-api
@@ -60,6 +71,8 @@ apis:
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
   tags:
+  - Carbon
+  tags_raw:
   - carbon
   properties:
   - type: OpenAPI
@@ -70,6 +83,8 @@ apis:
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
   tags:
+  - Clients
+  tags_raw:
   - client
   properties:
   - type: OpenAPI
@@ -80,6 +95,8 @@ apis:
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
   tags:
+  - Contact
+  tags_raw:
   - contact
   properties:
   - type: OpenAPI
@@ -110,6 +127,8 @@ apis:
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
   tags:
+  - Integration
+  tags_raw:
   - integrations
   properties:
   - type: OpenAPI
@@ -130,6 +149,8 @@ apis:
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
   tags:
+  - Payments
+  tags_raw:
   - payments
   properties:
   - type: OpenAPI
