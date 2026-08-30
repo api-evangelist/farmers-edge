@@ -82,7 +82,7 @@ apis:
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
   tags:
-  - Carbon
+  - carbon
   tags_raw:
   - carbon
   properties:
@@ -94,7 +94,7 @@ apis:
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
   tags:
-  - Clients
+  - client
   tags_raw:
   - client
   properties:
