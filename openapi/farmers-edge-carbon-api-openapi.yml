@@ -1,23 +1,17 @@
-swagger: '2.0'
+openapi: 3.2.0
 info:
-  title: FarmCommand canplug carbon API
+  title: FarmCommand Carbon API
   termsOfService: https://www.farmcommand.com/terms-of-service
   contact:
     name: Product Support
     email: productsupport@farmersedge.ca
-  version: "1.0"
-host: admin.farmcommand.com
-basePath: /
-schemes:
-- https
-consumes:
-- application/json
-produces:
-- application/json
+  version: ''
+servers:
+- url: https://admin.farmcommand.com/
 security:
 - FarmCommand Token: []
 tags:
-- name: carbon
+- name: Carbon
 paths:
   /carbon/docusign-envelope-webhook/:
     parameters: []
@@ -25,31 +19,6 @@ paths:
       operationId: carbon_docusign-envelope-webhook_create
       summary: Handle DocuSign webhook for envelope status updates
       description: ''
-      parameters:
-      - name: data
-        in: body
-        required: true
-        schema:
-          required:
-          - event
-          - data
-          type: object
-          properties:
-            event:
-              description: Webhook event type
-              type: string
-            data:
-              required:
-              - envelopeId
-              type: object
-              properties:
-                envelopeId:
-                  description: DocuSign Envelope ID
-                  type: string
-          example:
-            event: envelope-completed
-            data:
-              envelopeId: <id>
       responses:
         '200':
           description: Document signed successfully.
@@ -60,9 +29,35 @@ paths:
         '404':
           description: Envelope not found.
       tags:
-      - carbon
-securityDefinitions:
-  FarmCommand Token:
-    type: apiKey
-    name: token
-    in: query
+      - Carbon
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+              - event
+              - data
+              type: object
+              properties:
+                event:
+                  description: Webhook event type
+                  type: string
+                data:
+                  required:
+                  - envelopeId
+                  type: object
+                  properties:
+                    envelopeId:
+                      description: DocuSign Envelope ID
+                      type: string
+              example:
+                event: envelope-completed
+                data:
+                  envelopeId: <id>
+        required: true
+components:
+  securitySchemes:
+    FarmCommand_Token:
+      type: apiKey
+      name: token
+      in: query

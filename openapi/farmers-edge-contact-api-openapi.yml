@@ -1,60 +1,59 @@
-swagger: '2.0'
+openapi: 3.2.0
 info:
-  title: FarmCommand canplug contact API
+  title: FarmCommand Contact API
   termsOfService: https://www.farmcommand.com/terms-of-service
   contact:
     name: Product Support
     email: productsupport@farmersedge.ca
-  version: "1.0"
-host: admin.farmcommand.com
-basePath: /
-schemes:
-- https
-consumes:
-- application/json
-produces:
-- application/json
+  version: ''
+servers:
+- url: https://admin.farmcommand.com/
 security:
 - FarmCommand Token: []
 tags:
-- name: contact
+- name: Contact
 paths:
   /contact/{token}/unsubscribe:
     parameters:
     - name: token
       in: path
       required: true
-      type: string
+      schema:
+        type: string
     get:
       operationId: contact_unsubscribe_list
       description: This view should be triggered by clicking the unsubscribe link in an email
-      parameters: []
       responses:
         '200':
           description: Successfully unsubscribed
         '404':
           description: Contact Not Found
       tags:
-      - contact
+      - Contact
+      summary: Contact unsubscribe list
+      x-summary-source: derived
   /contact/{token}/verify:
     parameters:
     - name: token
       in: path
       required: true
-      type: string
+      schema:
+        type: string
     get:
       operationId: contact_verify_list
       description: This view should be triggered by an email about verifying your email
-      parameters: []
       responses:
         '200':
           description: Email verified
         '404':
           description: Contact Not Found
       tags:
-      - contact
-securityDefinitions:
-  FarmCommand Token:
-    type: apiKey
-    name: token
-    in: query
+      - Contact
+      summary: Contact verify list
+      x-summary-source: derived
+components:
+  securitySchemes:
+    FarmCommand_Token:
+      type: apiKey
+      name: token
+      in: query

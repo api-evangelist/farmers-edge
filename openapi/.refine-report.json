@@ -1,17 +1,7 @@
 {
   "provider": "farmers-edge",
   "sources": [
-    "farmers-edge-canplug-api-openapi.yml",
-    "farmers-edge-carbon-api-openapi.yml",
-    "farmers-edge-client-api-openapi.yml",
-    "farmers-edge-contact-api-openapi.yml",
-    "farmers-edge-gridcalc-api-openapi.yml",
-    "farmers-edge-hefty-api-openapi.yml",
-    "farmers-edge-integrations-api-openapi.yml",
-    "farmers-edge-labcommand-api-openapi.yml",
-    "farmers-edge-payments-api-openapi.yml",
-    "farmers-edge-recengine-api-openapi.yml",
-    "farmers-edge-token-login-api-openapi.yml"
+    "_original/farmers-edge-farmcommand-openapi-original.json"
   ],
   "outputs": [
     "farmers-edge-canplug-api-openapi.yml",
@@ -29,18 +19,35 @@
   "archived": [],
   "errors": [],
   "warnings": [
-    "farmers-edge-canplug-api-openapi.yml: info.version missing",
-    "farmers-edge-carbon-api-openapi.yml: info.version missing",
-    "farmers-edge-client-api-openapi.yml: info.version missing",
-    "farmers-edge-contact-api-openapi.yml: info.version missing",
-    "farmers-edge-gridcalc-api-openapi.yml: info.version missing",
-    "farmers-edge-hefty-api-openapi.yml: info.version missing",
-    "farmers-edge-integrations-api-openapi.yml: info.version missing",
-    "farmers-edge-labcommand-api-openapi.yml: info.version missing",
-    "farmers-edge-payments-api-openapi.yml: info.version missing",
-    "farmers-edge-recengine-api-openapi.yml: info.version missing",
-    "farmers-edge-token-login-api-openapi.yml: info.version missing"
+    "farmers-edge-farmcommand-openapi-original.json: info.version missing"
   ],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "farmers-edge-farmcommand-openapi-original.json: upgraded swagger 2.0 -> OpenAPI 3.2.0; renamed 1 component key(s) illegal in 3.x (e.g. FarmCommand Token)",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: canplug",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: carbon",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: client",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: contact",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: gridcalc",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: hefty",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: integrations",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: labcommand",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: payments",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: recengine",
+    "farmers-edge-farmcommand-openapi-original.json: declared missing tag: token-login",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "farmers-edge-canplug-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-carbon-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-client-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-contact-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-gridcalc-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-hefty-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-integrations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-labcommand-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-payments-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-recengine-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "farmers-edge-token-login-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }

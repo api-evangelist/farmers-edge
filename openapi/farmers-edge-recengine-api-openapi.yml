@@ -1,19 +1,13 @@
-swagger: '2.0'
+openapi: 3.2.0
 info:
-  title: FarmCommand canplug recengine API
+  title: FarmCommand Recengine API
   termsOfService: https://www.farmcommand.com/terms-of-service
   contact:
     name: Product Support
     email: productsupport@farmersedge.ca
-  version: "1.0"
-host: admin.farmcommand.com
-basePath: /
-schemes:
-- https
-consumes:
-- application/json
-produces:
-- application/json
+  version: ''
+servers:
+- url: https://admin.farmcommand.com/
 security:
 - FarmCommand Token: []
 tags:
@@ -24,37 +18,42 @@ paths:
     post:
       operationId: recengine_token-login_create
       description: Token login for RecEngine users, returns token if logged in successfully
-      parameters:
-      - name: data
-        in: body
-        required: true
-        schema:
-          required:
-          - password
-          - username
-          type: object
-          properties:
-            username:
-              type: string
-            password:
-              type: string
       responses:
         '201':
           description: ''
-          schema:
-            required:
-            - password
-            - username
-            type: object
-            properties:
-              username:
-                type: string
-              password:
-                type: string
+          content:
+            application/json:
+              schema:
+                required:
+                - password
+                - username
+                type: object
+                properties:
+                  username:
+                    type: string
+                  password:
+                    type: string
       tags:
       - recengine
-securityDefinitions:
-  FarmCommand Token:
-    type: apiKey
-    name: token
-    in: query
+      requestBody:
+        content:
+          application/json:
+            schema:
+              required:
+              - password
+              - username
+              type: object
+              properties:
+                username:
+                  type: string
+                password:
+                  type: string
+        required: true
+      summary: Recengine token login create
+      x-summary-source: derived
+components:
+  securitySchemes:
+    FarmCommand_Token:
+      type: apiKey
+      name: token
+      in: query
