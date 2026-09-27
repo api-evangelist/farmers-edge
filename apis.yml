@@ -68,7 +68,7 @@ tags_raw:
 - API
 apis:
 - aid: farmers-edge:farmers-edge-canplug-api
-  name: Farmers Edge canplug API
+  name: Farmers Edge Canplug API
   description: The canplug API from Farmers Edge — 1 operation(s) for canplug.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -78,7 +78,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-canplug-api-openapi.yml
 - aid: farmers-edge:farmers-edge-carbon-api
-  name: Farmers Edge carbon API
+  name: Farmers Edge Carbon API
   description: The carbon API from Farmers Edge — 1 operation(s) for carbon.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -90,7 +90,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-carbon-api-openapi.yml
 - aid: farmers-edge:farmers-edge-client-api
-  name: Farmers Edge client API
+  name: Farmers Edge Client API
   description: The client API from Farmers Edge — 7 operation(s) for client.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -102,7 +102,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-client-api-openapi.yml
 - aid: farmers-edge:farmers-edge-contact-api
-  name: Farmers Edge contact API
+  name: Farmers Edge Contact API
   description: The contact API from Farmers Edge — 2 operation(s) for contact.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -114,7 +114,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-contact-api-openapi.yml
 - aid: farmers-edge:farmers-edge-gridcalc-api
-  name: Farmers Edge gridcalc API
+  name: Farmers Edge Gridcalc API
   description: The gridcalc API from Farmers Edge — 1 operation(s) for gridcalc.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -124,7 +124,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-gridcalc-api-openapi.yml
 - aid: farmers-edge:farmers-edge-hefty-api
-  name: Farmers Edge hefty API
+  name: Farmers Edge Hefty API
   description: The hefty API from Farmers Edge — 4 operation(s) for hefty.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -134,7 +134,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-hefty-api-openapi.yml
 - aid: farmers-edge:farmers-edge-integrations-api
-  name: Farmers Edge integrations API
+  name: Farmers Edge Integrations API
   description: The integrations API from Farmers Edge — 1 operation(s) for integrations.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -146,7 +146,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-integrations-api-openapi.yml
 - aid: farmers-edge:farmers-edge-labcommand-api
-  name: Farmers Edge labcommand API
+  name: Farmers Edge Labcommand API
   description: The labcommand API from Farmers Edge — 3 operation(s) for labcommand.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -156,7 +156,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-labcommand-api-openapi.yml
 - aid: farmers-edge:farmers-edge-payments-api
-  name: Farmers Edge payments API
+  name: Farmers Edge Payments API
   description: The payments API from Farmers Edge — 3 operation(s) for payments.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -168,7 +168,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-payments-api-openapi.yml
 - aid: farmers-edge:farmers-edge-recengine-api
-  name: Farmers Edge recengine API
+  name: Farmers Edge Recengine API
   description: The recengine API from Farmers Edge — 1 operation(s) for recengine.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
@@ -178,7 +178,7 @@ apis:
   - type: OpenAPI
     url: openapi/farmers-edge-recengine-api-openapi.yml
 - aid: farmers-edge:farmers-edge-token-login-api
-  name: Farmers Edge token-login API
+  name: Farmers Edge Token Login API
   description: The token-login API from Farmers Edge — 1 operation(s) for token-login.
   humanURL: https://developer.farmcommand.com/
   baseURL: https://admin.farmcommand.com/
