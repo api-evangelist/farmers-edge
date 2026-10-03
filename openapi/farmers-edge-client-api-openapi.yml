@@ -220,170 +220,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    SelfServeClientResponse:
-      required:
-      - username
-      - email
-      - first_name
-      - last_name
-      - company_name
-      - phone
-      - postal_or_zip_code
-      - country
-      - client_type
-      - user
-      type: object
-      properties:
-        id:
-          title: ID
-          type: integer
-          readOnly: true
-        username:
-          title: Username
-          type: string
-          minLength: 1
-        email:
-          title: Email
-          type: string
-          format: email
-          minLength: 1
-        first_name:
-          title: First name
-          type: string
-          minLength: 1
-        last_name:
-          title: Last name
-          type: string
-          minLength: 1
-        company_name:
-          title: Company name
-          type: string
-          maxLength: 100
-          minLength: 1
-        partner:
-          title: Partner
-          type:
-          - string
-          - 'null'
-          enum:
-          - nsp
-        phone:
-          title: Phone
-          type: string
-          maxLength: 15
-          minLength: 1
-        address_line1:
-          title: Address line1
-          type:
-          - string
-          - 'null'
-          maxLength: 500
-        address_line2:
-          title: Address line2
-          type:
-          - string
-          - 'null'
-          maxLength: 500
-        city:
-          title: City
-          type:
-          - string
-          - 'null'
-          maxLength: 120
-        province_state:
-          title: Province state
-          type:
-          - string
-          - 'null'
-          maxLength: 100
-        postal_or_zip_code:
-          title: Postal or zip code
-          type: string
-          maxLength: 25
-          minLength: 1
-        country:
-          title: Country
-          type: string
-          enum:
-          - Canada
-          - USA
-          - Brazil
-        verified:
-          title: Verified
-          type: boolean
-        last_verification_email_sent:
-          title: Last verification email sent
-          type:
-          - string
-          - 'null'
-          format: date-time
-        client_type:
-          title: Client type
-          type: string
-          enum:
-          - Grower
-          - Retailer
-        payment_session_id:
-          title: Payment session id
-          type: string
-          maxLength: 256
-        client_secret:
-          title: Client secret
-          type: string
-          maxLength: 512
-        payment_session_status:
-          title: Payment session status
-          type: string
-          enum:
-          - open
-          - complete
-          - expired
-        eula_version:
-          title: Eula version
-          type:
-          - string
-          - 'null'
-          format: date
-        eula_date_signed:
-          title: Eula date signed
-          type: string
-          format: date-time
-        crm_id:
-          title: Crm id
-          type: string
-        created_datetime:
-          title: Created datetime
-          type: string
-          format: date-time
-          readOnly: true
-        updated_datetime:
-          title: Updated datetime
-          type: string
-          format: date-time
-          readOnly: true
-        client:
-          title: Client
-          type:
-          - integer
-          - 'null'
-        user:
-          title: User
-          type: integer
-        service_offering:
-          title: Service offering
-          type:
-          - integer
-          - 'null'
-        created_by:
-          title: Created by
-          type:
-          - integer
-          - 'null'
-        last_updated_by:
-          title: Last updated by
-          type:
-          - integer
-          - 'null'
     SelfServeClient:
       required:
       - username
@@ -556,6 +392,170 @@ components:
           title: Last updated by
           type: integer
           readOnly: true
+    SelfServeClientResponse:
+      required:
+      - username
+      - email
+      - first_name
+      - last_name
+      - company_name
+      - phone
+      - postal_or_zip_code
+      - country
+      - client_type
+      - user
+      type: object
+      properties:
+        id:
+          title: ID
+          type: integer
+          readOnly: true
+        username:
+          title: Username
+          type: string
+          minLength: 1
+        email:
+          title: Email
+          type: string
+          format: email
+          minLength: 1
+        first_name:
+          title: First name
+          type: string
+          minLength: 1
+        last_name:
+          title: Last name
+          type: string
+          minLength: 1
+        company_name:
+          title: Company name
+          type: string
+          maxLength: 100
+          minLength: 1
+        partner:
+          title: Partner
+          type:
+          - string
+          - 'null'
+          enum:
+          - nsp
+        phone:
+          title: Phone
+          type: string
+          maxLength: 15
+          minLength: 1
+        address_line1:
+          title: Address line1
+          type:
+          - string
+          - 'null'
+          maxLength: 500
+        address_line2:
+          title: Address line2
+          type:
+          - string
+          - 'null'
+          maxLength: 500
+        city:
+          title: City
+          type:
+          - string
+          - 'null'
+          maxLength: 120
+        province_state:
+          title: Province state
+          type:
+          - string
+          - 'null'
+          maxLength: 100
+        postal_or_zip_code:
+          title: Postal or zip code
+          type: string
+          maxLength: 25
+          minLength: 1
+        country:
+          title: Country
+          type: string
+          enum:
+          - Canada
+          - USA
+          - Brazil
+        verified:
+          title: Verified
+          type: boolean
+        last_verification_email_sent:
+          title: Last verification email sent
+          type:
+          - string
+          - 'null'
+          format: date-time
+        client_type:
+          title: Client type
+          type: string
+          enum:
+          - Grower
+          - Retailer
+        payment_session_id:
+          title: Payment session id
+          type: string
+          maxLength: 256
+        client_secret:
+          title: Client secret
+          type: string
+          maxLength: 512
+        payment_session_status:
+          title: Payment session status
+          type: string
+          enum:
+          - open
+          - complete
+          - expired
+        eula_version:
+          title: Eula version
+          type:
+          - string
+          - 'null'
+          format: date
+        eula_date_signed:
+          title: Eula date signed
+          type: string
+          format: date-time
+        crm_id:
+          title: Crm id
+          type: string
+        created_datetime:
+          title: Created datetime
+          type: string
+          format: date-time
+          readOnly: true
+        updated_datetime:
+          title: Updated datetime
+          type: string
+          format: date-time
+          readOnly: true
+        client:
+          title: Client
+          type:
+          - integer
+          - 'null'
+        user:
+          title: User
+          type: integer
+        service_offering:
+          title: Service offering
+          type:
+          - integer
+          - 'null'
+        created_by:
+          title: Created by
+          type:
+          - integer
+          - 'null'
+        last_updated_by:
+          title: Last updated by
+          type:
+          - integer
+          - 'null'
   securitySchemes:
     FarmCommand_Token:
       type: apiKey
