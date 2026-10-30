@@ -64,6 +64,124 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Farmers Edge is a company surfaced as a portfolio company of kleiner-perkins and added to the API Evangelist network as a stub for enrichment. Sector: enterprise. This profile is a lead awaiting the enrichment pipeline.
+Farmers Edge is a precision-agriculture and digital-farming company whose FarmCommand platform combines satellite imagery, connected weather stations, in-field telematics (the CanPlug IoT device), agronomic modeling, carbon-program tooling, and soil/lab products such as LabCommand and Hefty/FESoils. The public FarmCommand API is a Django REST (drf-yasg) service on admin.farmcommand.com that handles self-serve client onboarding and verification, token-based login for FarmCommand, LabCommand, GridCalc, RecEngine and Hefty users, password resets, CanPlug device lookup, and inbound integration webhooks (Stripe billing, DocuSign envelopes, LEAF field alerts). Authentication is a FarmCommand API token passed as a query parameter.
 
-Backed by: kleiner-perkins
+**Areas:** Company · Enterprise · Agriculture · Precision Agriculture · AgTech · Farm Management · Digital Agriculture · IoT · Weather · Carbon
+
+## Farmers Edge on APIs.io
+
+Everything profiled for Farmers Edge is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/farmers-edge/](https://apis.io/providers/farmers-edge/)** — or go straight to one of the APIs or properties below.
+
+### APIs (11)
+
+- [Farmers Edge Canplug API](https://apis.io/apis/farmers-edge/farmers-edge-canplug-api/) — The canplug API from Farmers Edge — 1 operation(s) for canplug.
+- [Farmers Edge Carbon API](https://apis.io/apis/farmers-edge/farmers-edge-carbon-api/) — The carbon API from Farmers Edge — 1 operation(s) for carbon.
+- [Farmers Edge Client API](https://apis.io/apis/farmers-edge/farmers-edge-client-api/) — The client API from Farmers Edge — 7 operation(s) for client.
+- [Farmers Edge Contact API](https://apis.io/apis/farmers-edge/farmers-edge-contact-api/) — The contact API from Farmers Edge — 2 operation(s) for contact.
+- [Farmers Edge Gridcalc API](https://apis.io/apis/farmers-edge/farmers-edge-gridcalc-api/) — The gridcalc API from Farmers Edge — 1 operation(s) for gridcalc.
+- [Farmers Edge Hefty API](https://apis.io/apis/farmers-edge/farmers-edge-hefty-api/) — The hefty API from Farmers Edge — 4 operation(s) for hefty.
+- [Farmers Edge Integrations API](https://apis.io/apis/farmers-edge/farmers-edge-integrations-api/) — The integrations API from Farmers Edge — 1 operation(s) for integrations.
+- [Farmers Edge Labcommand API](https://apis.io/apis/farmers-edge/farmers-edge-labcommand-api/) — The labcommand API from Farmers Edge — 3 operation(s) for labcommand.
+- [Farmers Edge Payments API](https://apis.io/apis/farmers-edge/farmers-edge-payments-api/) — The payments API from Farmers Edge — 3 operation(s) for payments.
+- [Farmers Edge Recengine API](https://apis.io/apis/farmers-edge/farmers-edge-recengine-api/) — The recengine API from Farmers Edge — 1 operation(s) for recengine.
+- [Farmers Edge Token Login API](https://apis.io/apis/farmers-edge/farmers-edge-token-login-api/) — The token-login API from Farmers Edge — 1 operation(s) for token-login.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [farmcommand](https://apis.io/servers/farmers-edge/farmcommand/)
+
+#### Collections (11)
+
+Postman and Open Collection request collections.
+
+- [FarmCommand canplug API](https://apis.io/collections/farmers-edge/open-farmers-edge-canplug-api/)
+- [FarmCommand canplug carbon API](https://apis.io/collections/farmers-edge/open-farmers-edge-carbon-api/)
+- [FarmCommand canplug client API](https://apis.io/collections/farmers-edge/open-farmers-edge-client-api/)
+- [FarmCommand canplug contact API](https://apis.io/collections/farmers-edge/open-farmers-edge-contact-api/)
+- [FarmCommand canplug gridcalc API](https://apis.io/collections/farmers-edge/open-farmers-edge-gridcalc-api/)
+- [FarmCommand canplug hefty API](https://apis.io/collections/farmers-edge/open-farmers-edge-hefty-api/)
+- [FarmCommand canplug integrations API](https://apis.io/collections/farmers-edge/open-farmers-edge-integrations-api/)
+- [FarmCommand canplug labcommand API](https://apis.io/collections/farmers-edge/open-farmers-edge-labcommand-api/)
+- [FarmCommand canplug payments API](https://apis.io/collections/farmers-edge/open-farmers-edge-payments-api/)
+- [FarmCommand canplug recengine API](https://apis.io/collections/farmers-edge/open-farmers-edge-recengine-api/)
+- [FarmCommand canplug token-login API](https://apis.io/collections/farmers-edge/open-farmers-edge-token-login-api/)
+
+#### Overlays (1)
+
+OpenAPI overlays, including conversational phrasing for each operation.
+
+- [Farmers Edge Farmcommand Overlay](https://apis.io/overlays/farmers-edge/farmers-edge-farmcommand-overlay/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Farmers Edge Authentication](https://apis.io/security/farmers-edge/farmers-edge-authentication/)
+- [Farmers Edge Domain Security](https://apis.io/security/farmers-edge/farmers-edge-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.farmcommand.com/)
+- [Documentation](https://api.farmcommand.com/docs/)
+- [API reference](https://api.farmcommand.com/docs/)
+
+## API Evangelist rating
+
+**Kin Score 24.2** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 43.0 |
+| Contract governance | 4.5 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 30.4 |
+| Access clarity | 0.0 |
+
+**Agent readiness 19.6** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | derived (partial credit) |
+| OpenAPI Examples | partial |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 16.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/farmers-edge/](https://apis.io/providers/farmers-edge/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Farmers Edge: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/farmers-edge/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
